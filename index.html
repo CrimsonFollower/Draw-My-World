@@ -154,6 +154,113 @@ footer{padding:48px 0 34px;border-top:1px solid var(--line);color:var(--soft)}.f
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orbit,.marquee-track,.pipe-arrow svg,.cmd:after{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.stage-shell{transform:none!important}}
 </style>
+
+<style id="drawmyworld-mobile-ui-v1">
+/* Draw My World Responsive UI Upgrade - CrimsonFollower 2026 */
+:root{
+ --dmw-bg:#120d18;
+ --dmw-card:rgba(255,255,255,.08);
+ --dmw-purple:#8d6bd1;
+}
+@media(max-width:768px){
+ html{scroll-behavior:smooth;}
+ body{
+   overflow-x:hidden;
+   font-size:15px;
+ }
+ .wrap{
+   width:calc(100% - 28px)!important;
+   margin:auto;
+ }
+ header{
+   position:sticky;
+   top:0;
+   z-index:1000;
+   backdrop-filter:blur(16px);
+ }
+ .header-inner{
+   min-height:62px!important;
+ }
+ .logo img,.logo svg{
+   width:36px!important;
+   height:36px!important;
+ }
+ .logo span b{
+   font-size:15px!important;
+ }
+ .logo span small{
+   display:none!important;
+ }
+ .navlinks{
+   display:none!important;
+   position:absolute;
+   left:14px;
+   right:14px;
+   top:70px;
+   padding:18px;
+   border-radius:20px;
+   background:#171021;
+   box-shadow:0 15px 50px #0008;
+   flex-direction:column;
+   gap:14px;
+ }
+ .navlinks.active{
+   display:flex!important;
+ }
+ .menu-btn{
+   display:block!important;
+   width:42px;
+   height:42px;
+   border-radius:50%;
+ }
+ .hero-grid{
+   display:flex!important;
+   flex-direction:column;
+   gap:24px;
+ }
+ h1{
+   font-size:42px!important;
+   line-height:1.05!important;
+ }
+ .hero-lead{
+   font-size:16px!important;
+   line-height:1.8;
+ }
+ .hero-actions{
+   display:grid!important;
+   grid-template-columns:1fr;
+   gap:12px;
+ }
+ .btn{
+   min-height:46px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+ }
+ section{
+   padding-top:48px!important;
+   padding-bottom:48px!important;
+ }
+ .card,.panel,.feature-card{
+   border-radius:22px!important;
+   padding:18px!important;
+ }
+}
+/* 小屏横屏 */
+@media(max-height:600px) and (orientation:landscape){
+ .hero{
+   padding-top:25px!important;
+ }
+ .hero-grid{
+   grid-template-columns:1fr 1fr;
+ }
+}
+/* 配置/加载等弹窗统一移动端 */
+.modal,.dialog{
+ max-width:min(94vw,520px)!important;
+ border-radius:24px!important;
+}
+</style>
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -165,7 +272,7 @@ footer{padding:48px 0 34px;border-top:1px solid var(--line);color:var(--soft)}.f
     </a>
     <nav class="navlinks" id="navlinks" aria-label="主导航">
       <a href="#about">项目</a><a href="#technology">技术</a><a href="#manifesto">声明</a><a href="#future">未来</a><a href="#team">团队</a><a href="#author">作者</a>
-      <a class="nav-cta" data-project-link="experience" href="./Draw-My-World.html">进入绘世</a>
+      <a class="nav-cta" data-project-link="experience" href="./bedrock_drawmyworld.html" aria-label="进入绘世工具">进入绘世</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="打开导航" aria-expanded="false">☰</button>
   </div>
@@ -178,7 +285,7 @@ footer{padding:48px 0 34px;border-top:1px solid var(--line);color:var(--soft)}.f
       <h1><span class="cn">把世界<br>重新画一遍</span><span class="en">Draw My World</span></h1>
       <p class="hero-lead">把一张图像翻译为方块、命令与时间。<strong>绘世</strong>让盔甲架成为画笔，让作品在《我的世界》基岩版中一格一格生长。</p>
       <div class="hero-actions">
-        <a class="btn primary" data-project-link="experience" href="./Draw-My-World.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 5v14l11-7z"/></svg>立即体验</a>
+        <a class="btn primary" data-project-link="experience" href="./bedrock_drawmyworld.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 5v14l11-7z"/></svg>立即体验</a>
         <a class="btn" data-project-link="github" href="https://github.com/CrimsonFollower/Draw-My-World" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.6-.5-2.3 3.3-.4 6.8-1.6 6.8-7.3 0-1.6-.6-2.9-1.5-3.9.2-.4.7-1.9-.1-3.8 0 0-1.2-.4-4 1.5a13.6 13.6 0 0 0-7.2 0c-2.7-1.9-4-1.5-4-1.5-.8 1.9-.3 3.4-.1 3.8A5.6 5.6 0 0 0 3 8.5c0 5.7 3.5 6.9 6.8 7.3-.4.4-.8 1-.8 2.1V22"/></svg>查看源代码</a>
       </div>
       <div class="hero-note"><i>✓</i>图片在浏览器本地处理 · 开源 · 面向基岩版</div>
@@ -299,7 +406,7 @@ footer{padding:48px 0 34px;border-top:1px solid var(--line);color:var(--soft)}.f
 <script>
 /* Project links */
 const PROJECT_LINKS={
-  experience:"./Draw-My-World.html",
+  experience:"./bedrock_drawmyworld.html",
   github:"https://github.com/CrimsonFollower/Draw-My-World",
   join:"https://github.com/CrimsonFollower/Draw-My-World/issues"
 };

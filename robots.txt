@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /Draw-My-World/
+
+User-agent: OAI-SearchBot
+Allow: /Draw-My-World/
+
+User-agent: GPTBot
+Allow: /Draw-My-World/
+
+User-agent: Googlebot
+Allow: /Draw-My-World/
+
+User-agent: Google-Extended
+Allow: /Draw-My-World/
+
+User-agent: Bingbot
+Allow: /Draw-My-World/
+
+User-agent: Applebot
+Allow: /Draw-My-World/
+
+User-agent: ClaudeBot
+Allow: /Draw-My-World/
+
+User-agent: PerplexityBot
+Allow: /Draw-My-World/
+
+Sitemap: https://crimsonfollower.github.io/Draw-My-World/sitemap.xml
